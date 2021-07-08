@@ -1,0 +1,21 @@
+.CheckoutProduct{
+  display: flex;
+  margin:30px;
+  width:600px;
+  max-width: 1000px;
+}
+.CheckoutProduct_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 30px;
+}
+.CheckoutProduct_image{
+  width:200px;
+}
+
+.CheckoutProduct_button{
+  border: 1px solid black;
+  padding: 5px;
+  width:200px;
+}

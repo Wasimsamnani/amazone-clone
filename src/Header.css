@@ -1,0 +1,66 @@
+.header{
+  height: 60;
+  display: flex;
+  align-items: center;
+  background-color:#0F1111;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header_logo{
+    width: 100px;
+    object-fit: contain;
+    margin:10px;
+    padding:0 7px 0 5px;
+}
+.header_search{
+  display: flex;
+  flex: 1;
+  align-items: center;
+  border-radius: 24px;
+}
+.header_searchinput{
+  height: 12px;
+  padding: 10px;
+  border: none;
+  width: 100%;
+}
+.header_searchicon{
+  padding: 5px;
+  height: 22px !important;
+  background-color:#cd9042;
+}
+.header_nav{
+  display: flex;
+  justify-content: center;
+}
+.header_options{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #FFFFFF;
+}
+.header_lineone{
+  font-size: 10px;
+}
+.header_linetwo{
+  font-size:12px;
+}
+.header_optionbasket{
+  display:flex;
+  align-items: center;
+  color: white;
+}
+.header_basketlineone{
+  margin-left: 10px;
+  margin-right: 5px;
+}
+.header_basketlinetwo{
+  margin-right: 10px;
+}
+
+.header_productcount{
+  margin-left: 10px;
+  margin-right: 10px;
+}

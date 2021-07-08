@@ -1,0 +1,10 @@
+.Subtotal{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color:rgb(228, 255, 239);
+  padding: 10px;
+  color: black;
+  border: 1px solid white;
+  border-radius: 3px;
+}
