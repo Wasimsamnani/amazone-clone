@@ -1,5 +1,7 @@
 import './Product.css';
 import {useStateValue} from './StateProvider';
+
+
 const Product = ({id,title,price,image,ratings}) => {
   const [{basket},dispatch] = useStateValue();
   const Addtobasket = () =>{

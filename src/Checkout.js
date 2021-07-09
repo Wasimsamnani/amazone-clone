@@ -4,14 +4,15 @@ import Subtotal from './Subtotal';
 import {useStateValue} from './StateProvider';
 import CheckoutProduct from './CheckoutProduct';
 const Checkout = (props) => {
-  const [{basket},dispatch] = useStateValue();
+  const [{basket,user},dispatch] = useStateValue();
   return (
     <div className="Checkout">
       <div>
+        <h3> {user?`hello ${user.email},`:null}</h3>
         <h2 className="Chekout_title">Your Shoping  Basket</h2>
       {basket.map((items,ind) => (
         <CheckoutProduct
-          id={Math.random()}
+          ind={ind}
           title={items.title}
           price={items.price}
           image={items.image}
@@ -21,7 +22,7 @@ const Checkout = (props) => {
       </div>
       <div className="Checkout_right">
           <Subtotal items={basket?.length} price={basket.reduce((total,item) => {
-            return total+item.price
+            return Math.ceil(total+item.price)
           },0)}/>
       </div>
     </div>
