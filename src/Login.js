@@ -4,7 +4,7 @@ import {Link,useHistory} from 'react-router-dom';
 import {db,auth } from './Firebase';
 
 
-const Login = (props) => {
+const Login = () => {
   const [email,setemail] = useState("");
   const [password,setpassword] = useState("");
   const history = useHistory();

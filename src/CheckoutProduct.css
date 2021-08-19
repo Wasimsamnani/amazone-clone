@@ -6,6 +6,7 @@
 }
 .CheckoutProduct_container{
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-around;
   margin-left: 30px;
@@ -18,4 +19,7 @@
   border: 1px solid black;
   padding: 5px;
   width:200px;
+}
+.Checkout_title{
+  font-weight: 500;
 }

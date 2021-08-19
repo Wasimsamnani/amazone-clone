@@ -1,0 +1,18 @@
+.Order{
+  padding: 40px;
+  margin:20px 0;
+  border:10px solid lightwhite;
+  background-color:white;
+  position: relative;
+}
+
+.Order_ids{
+  position: absolute;
+  top:40px;
+  right: 20px;
+}
+
+.order_totalamount{
+  text-align: right;
+  font-weight: 500;
+}

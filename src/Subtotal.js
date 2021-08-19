@@ -1,7 +1,8 @@
-import React from 'react';
+import React  from 'react';
 import './Subtotal.css';
-
+import {useHistory} from 'react-router-dom';
 const Subtotal = ({items,price}) => {
+  const history = useHistory();
   return (
     <div className="Subtotal">
     <p className="Checkout_totaltitle">
@@ -10,7 +11,7 @@ const Subtotal = ({items,price}) => {
      <small className="Subtotal_small">
        <input type="checkbox"/>This order contains a gift
      </small>
-  <button>Proceed To Checkout</button>
+  <button onClick={e=>history.push('/payment')}>Proceed To Checkout</button>
   </div>
 
   )

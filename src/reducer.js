@@ -1,6 +1,6 @@
 export const initialState = {
   basket:[],
-  user:null
+  user:null,
 };
  const reducer = (state,action)=> {
   switch(action.type){
@@ -19,7 +19,10 @@ export const initialState = {
         ...state,
         user:action.user
       }
-
+      case "EMPTY_BASKET":
+      return {
+        basket:[]
+      };
     default:
     return state;
   }
