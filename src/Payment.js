@@ -19,11 +19,18 @@ const Payment = (props) => {
   const [clientSecrect,setclientSecrect] = useState(true);
   var total = basket.reduce((total,item)=>{return total+item.price},0);
     useEffect(() => {
-       axios({
-        method:'post',
-        url:`/payments/create/?total=${Math.ceil(total*100)}`,
-      }).then(res=>setclientSecrect(res.data.clientSecrect)).catch(err=>seterror(err))
-  },[basket]);
+      const getClientSecret = async () => {
+         const response = await axios({
+             method: 'post',
+             // Stripe expects the total in a currencies subunits
+             url: `/payments/create?total=${total*100}`
+         });
+         setclientSecrect(response.data.clientSecret)
+     }
+
+     getClientSecret();
+ }, [basket])
+
   const handelesubmit = async (e) => {
       e.preventDefault();
       setprocessing(true);
